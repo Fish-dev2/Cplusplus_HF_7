@@ -16,6 +16,5 @@ private:
 	int m_iCurrIndex; // aktuális index a bejárás során 
 	void orderNames(); //nevek rendezése
 	int m_iArray[MAXLENGTH]; //rendezett
-	int indexOfName(int index); //adott index "rendezett indexe"
 };
 
