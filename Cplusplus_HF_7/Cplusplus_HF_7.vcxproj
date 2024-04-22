@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cphoneliist.cpp" />
+    <ClCompile Include="cphoneitername.cpp" />
+    <ClCompile Include="cphonelist.cpp" />
     <ClCompile Include="Cplusplus_HF_7.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cphoneliist.h" />
+    <ClInclude Include="cphoneitername.h" />
+    <ClInclude Include="cphonelist.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

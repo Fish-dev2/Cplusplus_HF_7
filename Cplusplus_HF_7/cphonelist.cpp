@@ -1,0 +1,27 @@
+﻿#include "cphonelist.h"
+#include <iostream>
+#include "cphoneitername.h"
+
+CPhoneList::CPhoneList() : m_iFirstEmpty(0) {}
+int CPhoneList::append(const Record& newrec) {
+    if (m_iFirstEmpty < MAXLENGTH) {
+        std::strcpy(m_rArray[m_iFirstEmpty].name, newrec.name);
+        std::strcpy(m_rArray[m_iFirstEmpty].number, newrec.number);
+        m_iFirstEmpty++;
+        return 0; 
+    }
+    return -1; 
+}
+void CPhoneList::displayname() {
+    CPhoneIterName listIterName(*this); 
+    Record* p = nullptr;
+
+    for (p = listIterName.begin(); p != nullptr; p = ++listIterName) {
+        std::cout << p->name << ": " << p->number << std::endl;
+    }
+}
+
+std::ostream& operator<<(std::ostream& os, Record& r)
+{
+    std::cout << std::endl << r.name << ";" << r.number;
+}
