@@ -61,5 +61,22 @@ Record* CPhoneIterName::search(const char* key) {
 }
 
 void CPhoneIterName::orderNames() {
+    for (size_t i = 0; i < m_cpList->m_iFirstEmpty; i++)
+    {
+        for (size_t j = i+1; j < m_cpList->m_iFirstEmpty; j++)
+        {
+            std::string tempI(m_cpList->m_rArray[i].name);
+            std::string tempJ(m_cpList->m_rArray[j].name);
+            if (tempI>tempJ)
+            {
+                m_iArray[i] = j;
+                m_iArray[j] = i;
+            }
+        }
+    }
 
+}
+int CPhoneIterName::indexOfName(int index)
+{
+    return 0;
 }
