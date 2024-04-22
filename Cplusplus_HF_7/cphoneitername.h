@@ -16,5 +16,6 @@ private:
 	int m_iCurrIndex; // aktuális index a bejárás során 
 	void orderNames(); //nevek rendezése
 	int m_iArray[MAXLENGTH]; //rendezett
+	bool caseInsensitiveCompare(const std::string& str1, const std::string& str2);
 };
 

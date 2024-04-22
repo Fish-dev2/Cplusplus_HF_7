@@ -2,6 +2,7 @@
 #include <iostream>
 #include "cphoneitername.h"
 
+
 CPhoneList::CPhoneList() : m_iFirstEmpty(0) {}
 
 int CPhoneList::append(const Record& newrec) {
