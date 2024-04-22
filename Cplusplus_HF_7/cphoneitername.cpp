@@ -60,10 +60,6 @@ Record* CPhoneIterName::search(const char* key) {
     return nullptr;
 }
 
-Record* CPhoneIterName::operator++() {
-    return next();
-}
-
 void CPhoneIterName::orderNames() {
 
 }

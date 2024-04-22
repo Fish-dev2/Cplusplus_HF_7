@@ -25,4 +25,5 @@ void CPhoneList::displayname() {
 std::ostream& operator<<(std::ostream& os, Record& r)
 {
     std::cout << std::endl << r.name << ";" << r.number;
+    return os;
 }
