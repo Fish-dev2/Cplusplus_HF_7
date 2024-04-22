@@ -3,14 +3,15 @@
 #include "cphoneitername.h"
 
 CPhoneList::CPhoneList() : m_iFirstEmpty(0) {}
+
 int CPhoneList::append(const Record& newrec) {
     if (m_iFirstEmpty < MAXLENGTH) {
-        std::strcpy(m_rArray[m_iFirstEmpty].name, newrec.name);
-        std::strcpy(m_rArray[m_iFirstEmpty].number, newrec.number);
+        strcpy_s(m_rArray[m_iFirstEmpty].name, sizeof(m_rArray[m_iFirstEmpty].name), newrec.name);
+        strcpy_s(m_rArray[m_iFirstEmpty].number, sizeof(m_rArray[m_iFirstEmpty].number), newrec.number);
         m_iFirstEmpty++;
-        return 0; 
+        return 0;
     }
-    return -1; 
+    return -1;
 }
 void CPhoneList::displayname() {
     CPhoneIterName listIterName(*this); 

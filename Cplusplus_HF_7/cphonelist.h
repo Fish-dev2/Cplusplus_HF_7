@@ -8,6 +8,7 @@ struct Record {
 	char name[MAXNAME + 1];
 	char number[MAXNUMBER + 1];
 };
+
 class CPhoneList {
 	friend class CPhoneIterName; // növekvő sorrendben, name alapján
 public:
