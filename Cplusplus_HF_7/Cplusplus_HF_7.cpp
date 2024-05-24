@@ -28,5 +28,6 @@ int main()
     {
 		std::cout << p->name << std::endl;
     }
+	std::cout << (it.next() == nullptr);
 }
 
