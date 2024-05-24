@@ -1,4 +1,5 @@
-﻿#pragma once
+﻿//JI9J9A Füzi Bálint FELADAT7V2
+#pragma once
 #include "cphonelist.h"
 class CPhoneIterName
 {
