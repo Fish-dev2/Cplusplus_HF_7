@@ -234,25 +234,25 @@ namespace UnitTest1
 			Record sortedRecords[] = {
 				Record {"aBc", ""},
 				Record {"abc", ""},
-				Record {"Donna", ""},
-				Record {"danA", ""},
 				Record {"dana", ""},
+				Record {"danA", ""},
+				Record {"Donna", ""},
 				Record {"Jessica", ""},
-				Record {"Katrina", ""},
 				Record {"katrina", ""},
+				Record {"Katrina", ""},
 				Record {"Mike", ""},
 				Record {"Rachel", ""}
 			};
 			for (element = it.begin(); element != nullptr; element = it.next()) {
-				//Assert::AreEqual(sortedRecords[i].name, element->name);
+				Assert::AreEqual(sortedRecords[i].name, element->name);
 				++i;
 			}
 			element = it.prev();
 			Assert::AreEqual("Mike", element->name);
 			element = it.next();
+			Assert::IsTrue(it.end() != nullptr);
 			for (int i = 0; i < 3; ++i) {
-				if (it.next() != nullptr)
-					Assert::Fail();
+				Assert::IsTrue(it.next() == nullptr);
 			}
 			element = it.prev();
 			Assert::AreEqual("Mike", element->name);

@@ -20,7 +20,7 @@ void CPhoneList::displayname() {
     Record* p = nullptr;
 
     for (p = listIterName.begin(); p != nullptr; p = ++listIterName) {
-        std::cout << p->name << ";" << p->number << std::endl;
+        std::cout << std::endl << p->name << ";" << p->number;
     }
 }
 
