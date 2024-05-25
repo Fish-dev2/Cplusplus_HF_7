@@ -1,3 +1,4 @@
+//JI9J9A Füzi Bálint FELADAT7V2
 #include "cphoneitername.h"
 #include <algorithm>
 
@@ -25,6 +26,11 @@ Record* CPhoneIterName::prev() {
 }
 
 Record* CPhoneIterName::next() {
+    //m_iCurrIndex++;
+    if (m_iCurrIndex == m_cpList->m_iFirstEmpty -1)
+    {
+        return nullptr;
+    }
     if (m_iCurrIndex < m_cpList->m_iFirstEmpty - 1)
         return &(m_cpList->m_rArray[m_iArray[++m_iCurrIndex]]);
     else

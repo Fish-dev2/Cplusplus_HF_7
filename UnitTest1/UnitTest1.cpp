@@ -1,4 +1,4 @@
-//JI9J9A Füzi Bálint FELADAT7V1
+//JI9J9A Füzi Bálint FELADAT7V2
 #include "pch.h"
 #include "CppUnitTest.h"
 #include "cphonelist.h"
