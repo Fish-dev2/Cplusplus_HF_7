@@ -26,15 +26,10 @@ Record* CPhoneIterName::prev() {
 }
 
 Record* CPhoneIterName::next() {
-    //m_iCurrIndex++;
-    if (m_iCurrIndex == m_cpList->m_iFirstEmpty -1)
-    {
+    if (m_iCurrIndex >= m_cpList->m_iFirstEmpty - 1) {
         return nullptr;
     }
-    if (m_iCurrIndex < m_cpList->m_iFirstEmpty - 1)
-        return &(m_cpList->m_rArray[m_iArray[++m_iCurrIndex]]);
-    else
-        return nullptr;
+    return &(m_cpList->m_rArray[m_iArray[++m_iCurrIndex]]);
 }
 
 Record* CPhoneIterName::operator++() {
@@ -43,8 +38,10 @@ Record* CPhoneIterName::operator++() {
 
 
 Record* CPhoneIterName::end() {
-    if (m_cpList->m_iFirstEmpty > 0)
+    if (m_cpList->m_iFirstEmpty > 0) {
+        m_iCurrIndex = m_cpList->m_iFirstEmpty - 1;
         return &(m_cpList->m_rArray[m_iArray[m_cpList->m_iFirstEmpty - 1]]);
+    }
     else
         return nullptr;
 }
